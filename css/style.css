@@ -13,14 +13,22 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -28,17 +36,25 @@ ol[role='list'] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  margin: 0;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
@@ -56,8 +72,10 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -71,4 +89,105 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-body{background-color:#ff0}
+@media screen and (max-width: 640px) {
+  nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 0;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  input {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input:hover + .menu button span:nth-child(2) {
+    left: -5px;
+  }
+
+  input:hover + .menu button span:nth-child(1) {
+    left: -5px;
+  }
+
+  input:hover + .menu button span:nth-child(3) {
+    left: -5px;
+  }
+
+  input:checked + .menu button span {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:checked + .menu button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  input:checked + .menu button span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  input:checked + .menu button span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(187, 174, 81, 0.5);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
+  }
+
+  input:checked+.menu nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
