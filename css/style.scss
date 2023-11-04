@@ -97,7 +97,7 @@ textarea:not([rows]) {
 body {
   font-family: 'Rubik', 'Jolly Lodger', 'sans-serif';
   font-size: 1 rem;
-  background-image: url('/assets/images/crypto.jpg');
+  background-image: url('/assets/images/crypto.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -205,7 +205,7 @@ footer p {
   font-size: 0.9rem;
   text-align: center;
   font-weight: 200;
-  margin: -0.5rem 2rem 2rem 4rem;
+  margin: 0rem 2rem 2rem 4rem;
 }
 
 footer button {
@@ -234,7 +234,7 @@ footer button {
 @media screen and (max-width: 680px) {
 
   body {
-    background-image: url('/assets/images/crypto_mobile.png');
+    background-image: url('/assets/images/crypto_mobile.webp');
   }
 
   .header {
@@ -429,6 +429,10 @@ footer button {
     opacity: 1;
   }
 
+  footer {
+    visibility: hidden;
+  }
+  
 }
 
 @media screen and (min-width: 681px) {
