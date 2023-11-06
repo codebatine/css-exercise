@@ -1,90 +1,4 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-/* -----------General Styles------------ */
+@import '_reset.scss';
 
 body {
   font-family: 'Rubik', 'Jolly Lodger', 'sans-serif';
@@ -94,8 +8,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   display: flex;
-
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -342,8 +255,9 @@ footer button {
   }
 
   .menu button {
-    display:block;
+    display: block;
     flex-grow: 1;
+    border: none;
   }
 
   .menu nav {
@@ -354,7 +268,6 @@ footer button {
     width: 100%;
     /* Set height to fill remaining viewport */
     height: calc(100vh - 125px);
-    overflow: auto;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -386,7 +299,6 @@ footer button {
     width: 60px;
     height: 60px;
     background: transparent;
-    border: 3;
     position: fixed;
     left: 20px;
     top: 20px;
@@ -412,8 +324,8 @@ footer button {
     right: auto;
     left: 20px;
     z-index: 1;
-    width: 35px;
-    height: 35px;
+    width: 48px;
+    height: 48px;
     opacity: 0;
     cursor: pointer;
   }
