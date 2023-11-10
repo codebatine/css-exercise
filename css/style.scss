@@ -180,11 +180,6 @@ footer button {
     height: 100px;
   }
 
-  .page1 > p {
-    font-size: 3.5rem;
-    max-width: 22rem;
-  }
-
   ul li:nth-child(odd) {
     display: none;
   }
@@ -222,9 +217,9 @@ footer button {
     visibility: visible;
   }
 
-  .page1>p {
-    width: 100%;
-    z-index: -1;
+  .page1> p {
+      font-size: 3.5rem;
+      max-width: 22rem;
   }
 
   .page2 {
@@ -503,7 +498,7 @@ footer button {
   }
 
   .page2 figure {
-    background-image: url('assets/images/remote_work.webp');
+    background-image: url('/assets/images/remote_work.webp');
     background-size: cover;
   }
 
@@ -512,7 +507,7 @@ footer button {
 @media screen and (max-width: 1270px) {
 
   .page2 {
-    background-image: url('assets/images/remote_work_bg.webp');
+    background-image: url('/assets/images/remote_work_bg.webp');
   }
 
   .page2 figure {
