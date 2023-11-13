@@ -3,7 +3,7 @@
 body {
   font-family: 'Rubik', 'Jolly Lodger', 'sans-serif';
   font-size: 1rem;
-  background-image: url('bcu23d-html-css-inl-mningsuppgift-2-codebatine/assets/images/crypto.webp');
+  background-image: url('../assets/images/crypto.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -174,7 +174,7 @@ footer button {
 @media screen and (max-width: 920px) {
 
   body {
-    background-image: url('bcu23d-html-css-inl-mningsuppgift-2-codebatine/assets/images/crypto_mobile.webp');
+    background-image: url('../assets/images/crypto_mobile.webp');
   }
 
   .header {
@@ -230,7 +230,7 @@ footer button {
     margin: auto;
     display: block;
     flex-direction: column;
-    background-image: url('bcu23d-html-css-inl-mningsuppgift-2-codebatine/assets/images/remote_work_bg.webp');
+    background-image: url('../assets/images/remote_work_bg.webp');
     background-size: cover;
   }
 
@@ -504,7 +504,7 @@ footer button {
   }
 
   .page2 figure {
-    background-image: url('bcu23d-html-css-inl-mningsuppgift-2-codebatine/assets/images/remote_work.webp');
+    background-image: url('../assets/images/remote_work.webp');
     background-size: cover;
   }
 
@@ -513,7 +513,7 @@ footer button {
 @media screen and (max-width: 1270px) {
 
   .page2 {
-    background-image: url('/assets/images/remote_work_bg.webp');
+    background-image: url('../assets/images/remote_work_bg.webp');
   }
 
   .page2 figure {
