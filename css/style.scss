@@ -3,7 +3,7 @@
 body {
   font-family: 'Rubik', 'Jolly Lodger', 'sans-serif';
   font-size: 1rem;
-  background-image: url('/assets/images/crypto.webp');
+  background-image: url('../assets/images/crypto.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -99,13 +99,14 @@ h1 {
 
 .page2 figure {
   width: 100%;
+  margin-right: 4rem;
 }
 
 .page2 section {
   width: 70%;
   display: block;
   justify-content: space-between;
-  padding: 2rem;
+  padding-top: 3rem;
 }
 
 .page2 h2 {
@@ -114,14 +115,15 @@ h1 {
 
 .page2 p {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
   color: rgb(255, 255, 255);
-  width: 80%;
+  width: 90%;
+  line-height: 1.5;
 }
 
 .page2 section>img {
   border-radius: 10px;
-  width: 70%;
+  width: 60%;
 }
 
 footer {
@@ -172,7 +174,7 @@ footer button {
 @media screen and (max-width: 920px) {
 
   body {
-    background-image: url('/assets/images/crypto_mobile.webp');
+    background-image: url('../assets/images/crypto_mobile.webp');
   }
 
   .header {
@@ -270,10 +272,14 @@ footer button {
 
   .menu {
     background-color: rgb(0, 0, 0);
-    height: 74px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .menu-link::before {
+    display: none;
   }
 
   .menu button {
@@ -531,8 +537,6 @@ footer button {
   .page2 p {
     width: 80%;
     order: 1;
-    margin: auto;
-    padding-bottom: 3rem;
   }
 
   .page2 section>img {
